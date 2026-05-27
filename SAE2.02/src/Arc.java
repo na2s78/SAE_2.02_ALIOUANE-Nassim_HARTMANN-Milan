@@ -2,9 +2,9 @@ public class Arc {
     private double poids;
     private String noeudCible;
 
-    public Arc(double poids, String n) {
-        this.poids = poids;
+    public Arc(String n, double poids) {
         this.noeudCible = n;
+        this.poids = poids;
     }
 
 

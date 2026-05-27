@@ -1,3 +1,5 @@
+import java.util.List;
+
 public interface Graphe {
 
     // récupération de la liste des nœuds du graphe

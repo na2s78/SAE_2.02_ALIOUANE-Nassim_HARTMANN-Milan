@@ -9,5 +9,7 @@ public class Principale{
         graphe.ajouterArc("B", "E", 11.0);
         graphe.ajouterArc("D", "C", 10.0);
         graphe.ajouterArc("E", "D", 43.0);
+
+        System.out.print(graphe);
     }
 }

@@ -59,6 +59,34 @@ public class GrapheListe implements Graphe {
         this.listesAdjacence.get(indiceSrc).ajouterArc(a);
 
     }
+
+    public String toString(){
+        String s = "";
+
+        for(int i = 0; i < this.noeuds.size(); i++){
+            String noeudSrc = this.noeuds.get(i);
+
+            // le noeud source avec la fleche ->
+            s = s + noeudSrc + " ->";
+
+            Arcs arcs = this.listesAdjacence.get(i);
+
+            // Recuperation de la liste
+            List<Arc> listeArc = arcs.getListeArcs();
+
+            for(int j = 0; j < listeArc.size(); j++){
+                Arc arc = listeArc.get(j);
+
+                double poids = arc.getPoids();
+
+                s = s + " " + arc.getNoeud() + "(" + poids + ")";
+            }
+
+            s = s + "\n";
+
+        }
+        return s;
+    }
 }
 
 

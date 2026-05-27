@@ -9,4 +9,13 @@ public class Arc {
 
 
 
+    public double getPoids(){
+        return this.poids;
+    }
+
+    public Noeud getNoeud(){
+        return this.noeud;
+    }
+
+    
 }

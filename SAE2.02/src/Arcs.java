@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Arcs {
     private List<Arc> listeArcs;
@@ -14,4 +15,6 @@ public class Arcs {
     public List<Arc> getListeArcs(){
         return this.listeArcs;
     }
+
+
 }

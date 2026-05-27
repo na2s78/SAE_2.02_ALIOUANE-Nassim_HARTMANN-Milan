@@ -1,10 +1,10 @@
 public class Arc {
     private double poids;
-    private Noeud noeud;
+    private String noeudCible;
 
-    public Arc(double poids, Noeud n) {
+    public Arc(double poids, String n) {
         this.poids = poids;
-        this.noeud = n;
+        this.noeudCible = n;
     }
 
 
@@ -13,9 +13,8 @@ public class Arc {
         return this.poids;
     }
 
-    public Noeud getNoeud(){
-        return this.noeud;
+    public String getNoeud(){
+        return this.noeudCible;
     }
 
-    
 }

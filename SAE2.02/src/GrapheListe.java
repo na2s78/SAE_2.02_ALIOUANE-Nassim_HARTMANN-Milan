@@ -45,7 +45,6 @@ public class GrapheListe implements Graphe {
         }
 
         // Ajout du noeud source si il n'existe pas
-
         if (this.noeuds.indexOf(noeudDest) < 0) {
             this.noeuds.add(noeudDest);
             this.listesAdjacence.add(new Arcs());

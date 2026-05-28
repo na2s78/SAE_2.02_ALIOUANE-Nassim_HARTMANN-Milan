@@ -93,4 +93,23 @@ public class Valeurs {
 
     }
 
+
+    /**
+     * Permet de reconstruire le chemin du point de départ à la destination
+     * @param destination le noeud final
+     * @return la liste des noeuds dans le bon ordre
+     */
+    public List<String> calculerChemin(String destination) {
+        List<String> chemin = new ArrayList<>(); // liste pour stocker le chemin final
+        String courant = destination; // on commence par la fin
+
+        // Tant qu'on trouve un parent valide
+        while (courant != null) {
+            chemin.add(0, courant); // on l'ajoute au début pour inverser le chemin
+            courant = this.getParent(courant); // on monte au parent suivant
+        }
+
+        return chemin; // on renvoie le chemin complet
+    }
+
 }

@@ -5,13 +5,13 @@ Milan a eu un problème de PC donc tous les push sont sur ceux de Nassim
 
 ==== Présentation de la structure du dossier ====
 
-## Structure du Projet
+Structure du Projet
 
 * `MainTransport.jar` : Exécutable Java (racine) utilisé par la GUI.
 * `main-gui.py` : Interface graphique Python (affichage de la carte).
 * `stan.nodes.txt` / `stan.edges.txt` : Fichiers de données du réseau STAN.
 
-### Code source (SAE2.02/src/)
+Code source (SAE2.02/src/)
 * Graphe : Graphe.java, GrapheListe.java, Arc.java, Arcs.java (Structure en listes d'adjacence).
 * Parsing : LireReseau.java (Lecture des fichiers texte).
 * Algorithmes : Dijkstra.java, BellmanFord.java, Valeurs.java (Calculs et reconstruction des chemins).

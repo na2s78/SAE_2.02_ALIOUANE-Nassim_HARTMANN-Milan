@@ -14,8 +14,18 @@ public class MainTransport {
             return;
         }
 
-        String depart = args[0];
-        String arrivee = args[1];
+        String departRaw = args[0];
+        String arriveeRaw = args[1];
+
+        String depart = departRaw;
+        String arrivee = arriveeRaw;
+
+        if (depart.contains("[")) {
+            depart = depart.substring(depart.indexOf("[") + 1, depart.indexOf("]"));
+        }
+        if (arrivee.contains("[")) {
+            arrivee = arrivee.substring(arrivee.indexOf("[") + 1, arrivee.indexOf("]"));
+        }
 
         String fichierStations = "stan.nodes.txt";
         String fichierConnexions = "stan.edges.txt";
@@ -60,21 +70,9 @@ public class MainTransport {
         // Calcul de la durée en millisecondes (ms)
         double tempsBellman = (finBellman - debutBellman) / 1000000.0;
 
-
         // ==========================================
-        //  AFFICHAGE DU TABLEAU
+        //  AFFICHAGE UNIQUE POUR LA GUI
         // ==========================================
-        System.out.println("\n========================================================================");
-
-
-        String format = "| %-10s | %-10s | %-30s | %-20s | %-15s |\n";
-
-        System.out.printf(format, "Départ", "Arrivée", "Chemin", "Temps Bellman-Ford", "Temps Dijkstra");
-        System.out.println("---------------------------------------------------------------------------------------");
-        System.out.printf(format, depart, arrivee, cheminStr, tempsBellman + " ms", tempsDijkstra + " ms");
-
-        System.out.println("========================================================================\n");
-
         System.out.println(cheminStr);
     }
 }
